@@ -1,0 +1,642 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background: #fff;
+    color: #333;
+}
+
+.body-wrapper {
+    margin: 0 auto;
+    padding: 20px; /* Si aumento el valor tengo más separación */
+    max-width: 1200px;
+}
+.section-title {
+    margin-top: 80px;
+    padding-top: 20px;
+}
+.separado {
+    margin-top: 60px;
+}
+/* ESTILOS CARRUSEL PERSONALIZADO - PÁGINA INDEX */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Caja de texto sin fondo tipo botón */
+.carousel-caption-custom {
+    position: absolute;
+    top: 65%;
+    bottom: 10%;
+    text-align: left;
+    padding: 1.2rem 2rem;
+    max-width: 80%;
+    color: #fff;
+}
+/* Título dentro del carrusel */
+.carousel-caption-custom h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* Responsive tablets */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 350px;
+    }
+
+    .carousel-caption-custom h5 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption-custom p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive móviles */
+@media (max-width: 480px) {
+    .carousel-item img {
+        height: 280px;
+    }
+
+    .carousel-caption-custom h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption-custom p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Slide 1 - Texto a la izquierda */
+.slide-1-caption {
+    left: 7%;
+    right: auto;
+    text-align: left;
+}
+
+/* Slide 2 - Texto centrado */
+.slide-2-caption {
+    left: 70%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    text-align: right;
+}
+
+.slide-2-caption h5 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .slide-2-caption {
+        left: 82%;
+        text-align: center;
+    }
+    
+    .slide-2-caption h5 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Slide 3 - Texto a la derecha */
+.slide-3-caption {
+    left: 60%;
+    right: auto;
+    text-align: right;
+}
+
+
+/* ==== NAV LINK ESTILOS  ==== */
+
+.custom-navbar {
+    background-color: #fff; /* Fondo blanco o neutro */
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .nav-link {
+    padding: 10px;
+    color: #333 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #e75cd0 !important; /* Hover */
+}
+
+.text-lilac {
+    color: #6e068e;
+}
+
+/* ==== ESTILO GALERÍA MANUAL  ==== */
+.galeria-section {
+    padding: 40px 20px;
+    
+}  
+.titulo-seccion {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+.subtitulo {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    color: #444;
+    text-align: center;
+}
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 60px;
+}
+
+/* Grid responsive */
+.galeria-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px 20px;
+}
+
+/* Tarjetas */
+.card {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    background-color: #fff ;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen con altura fija */
+.card img {
+    width: auto;
+    height: 100%; /* Para ajustar la altura en 400Px, pero mofifique */
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+/* Contenido textual fijo abajo */
+.card h4,
+.card p,
+.card .ver-mas {
+    margin-top: 0.5rem;
+}
+
+.card h4 {
+    margin-top: 0.8rem 0 0.4rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 0 0 0.6rem 0;
+    text-align: center;
+}
+a.ver-mas {
+    color: #333; /* Color neutro oscuro */
+    text-decoration: none; 
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a.ver-mas:hover {
+  color: #f6abab; /* Cambia al pasar el mouse */
+}
+
+@media (min-width: 992px) {
+.galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+/* ==== RESPONSIVE ajustes móviles ==== */
+@media (max-width: 576px) {
+.card img {
+    height: 180px;
+}
+
+.card h3 {
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+}
+
+.galeria-section {
+    padding: 30px 10px;
+}
+
+.galeria-cards {
+    gap: 30px 15px;
+}
+}
+
+/* ==== WHATSAPP ==== */
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    font-size: 40px; /* Tamaño para escritorio */
+    color: #25d366;
+    padding: 14px 16px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+.whatsapp {
+    font-size: 26px; /* Más chico en mobile */
+    padding: 11px 13px;
+    bottom: 15px;
+    right: 10px;
+}
+}
+
+.cta-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #c6c2c7;
+    font-weight: 500;
+    font-size: 1 rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+    color: #ffffff;
+    background-color: #a678b4;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ==== Estilo Tienda - Página de productos ==== */
+/* Título de sección tienda */
+.titulo-principal {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #6e068e;
+    font-weight: bold;
+}
+.subtitulo {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 1.5rem;
+        text-align: center;
+}
+}
+
+/* ==== Grid para mostrar productos ==== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 20px 0 40px 0;
+}
+
+/* ==== Tarjeta individual de producto ==== */
+.producto {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+}
+
+/* Imagen del producto */
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nombre del producto */
+.producto h3 {
+    margin: 15px 0 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Precio del producto */
+.precio {
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Botón de acción */
+.producto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #e75cd0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.producto a:hover {
+    background-color: #6c5ce7;
+}
+
+/* === ESTILOS FOOTER === */
+.footer {
+    margin-top: 80px;
+    max-width: 1200px;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.footer .social a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+.footer .suscripcion {
+    margin-top: 20px;
+}
+.footer input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.footer button {
+    padding: 10px;
+    background: #e75cd0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer button:hover {
+    background-color: #6c5ce7;
+}
+.footer .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+}
+.footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+ul{ 
+    list-style: none; 
+}
+
+a{ 
+    text-decoration: none; 
+} 
+
+/* ==== ESTILOS PÁGINA NOSOTROS ==== */
+
+.imagen-nosotros {
+    flex: 0 0 40%;
+    max-width: 600px;
+}
+.nosotros-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+
+.imagen-nosotros img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.texto-nosotros {
+    flex: 1;
+    min-width: 300px;
+}
+
+.btn-custom {
+    background-color: #e75cd0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* ==== ESTILOS PÁGINA CONTACTO ==== */
+.contacto-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contacto-section h1, .contacto-section h2 {
+    text-align: center;
+    color: #6e068e;
+}
+
+.contacto-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contacto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.mapa-contacto, .info-contacto {
+    flex: 1 1 300px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.info-contacto h2 {
+    font-size: 22px;
+    color: #e75cd0;
+}
+
+.info-contacto p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.formulario-contacto button {
+    background-color: #e75cd0;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #6e068e;
+}
+/* ==== ESTILOS ENLACE WHATSAPP ==== */
+.whatsapp-link {
+    display: inline-block;
+    background-color: #e75cd0;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.info-contacto i.fab.fa-whatsapp {
+    font-size: 22px; 
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.whatsapp-link:hover {
+    background-color: #6c5ce7;
+}
+/* ==== ESTILOS AJUSTE TAMAÑO CARD ==== */
+
+@media (max-width: 768px) {
+.galeria-grid {
+    grid-template-columns: 1fr;
+}
+
+.card {
+    max-width: 90%;
+    margin: 1rem auto;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card h4 {
+    font-size: 0.95rem;
+    margin: 0.4rem 0 0.2rem 0;
+}
+
+.card p {
+    font-size: 0.8rem;
+    margin: 0 0 0.6rem 0;
+}
+
+.card .ver-mas {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+}
+}
+
+/* Ajustes refinados para títulos y subtítulos en galeria.html */
+.galeria-section h4 {
+    font-size: 1rem;            /* Más pequeño */
+    margin: 0.3rem 0 0.2rem 0;  /* Menos espacio entre título y subtítulo */
+    text-align: center;
+  font-weight: 500;           /* Más liviano que bold */
+}
+
+.galeria-section p {
+    font-size: 0.85rem;         /* Subtítulo más pequeño */
+    margin: 0 0 0.5rem 0;       /* Menos aire */
+    text-align: center;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+.galeria-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+}
+
+.galeria-section p {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+}
