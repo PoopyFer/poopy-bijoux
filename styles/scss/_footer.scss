@@ -1,0 +1,103 @@
+// ==== Variables ====
+$color-black: #000;
+$color-primary: #e75cd0; // rosa
+$color-hover: #6c5ce7;   // violeta
+
+// ==== Placeholder base ====
+%btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+// ==== Mixin para iconos circulares ====
+@mixin icon-circle($size, $border-color) {
+    width: $size;
+    height: $size;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+}
+
+// ==== Footer exclusivo index ====
+.footer-index {
+    background-color: #f8f8f8; // o el que uses
+    padding: 2rem 0;
+    text-align: center; // Centra texto y elementos inline
+
+    display: flex;
+    flex-direction: column; // Apila elementos
+    align-items: center; // Centra horizontalmente
+    gap: 1.5rem; // Espacio entre elementos
+
+  // Redes sociales
+.social {
+        display: flex;
+        gap: 1rem;
+        justify-content: center; // Centra íconos
+    }
+.social a {
+    @extend %btn-base;
+    @include icon-circle(40px, $color-black);
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: $color-black;
+    box-shadow: none;
+
+    &:hover {
+        background-color: $color-hover;
+        color: #fff;
+        border-color: $color-hover;
+    }
+}
+
+  // Botón Suscribirse
+.subscribe-btn {
+    @extend %btn-base;
+    padding: 0.5rem 1.5rem;
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+
+    &:hover {
+        background-color: $color-hover;
+        }
+    }
+}
+// ==== Botón flotante WhatsApp ====
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; // verde WhatsApp
+    color: white !important;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;  // tamaño del icono
+    z-index: 1000;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: bounce 1s ease infinite;
+    animation-delay: 2s; // 2s pausa + 1s rebote = 3s ciclo
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe57 !important;
+}
+
+// Animación rebote
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    40% {transform: translateY(-10px); }
+    60% {transform: translateY(-5px); }
+}

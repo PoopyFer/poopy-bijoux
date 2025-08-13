@@ -1,0 +1,12 @@
+{
+  "name": "poopy-bijoux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compilar": "sass styles/scss:styles/css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
+

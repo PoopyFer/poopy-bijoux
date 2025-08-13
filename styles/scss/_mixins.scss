@@ -1,0 +1,28 @@
+@mixin icon-circle($size, $color) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 2px solid $color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $color;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@mixin btn-style($bg, $color, $hover-bg, $hover-color) {
+    background-color: $bg;
+    color: $color;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+&:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+}
+}

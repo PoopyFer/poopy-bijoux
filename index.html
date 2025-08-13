@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poopy Bijoux - Inicio</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/css/main.css">
+
     
     <!-- Favicon -->
     <link rel="icon" href="imagenes/favicon-poopy.ico" type="image/x-icon">
@@ -21,6 +22,12 @@
 
 <body>
     <div class="body-wrapper">
+        <!-- Barra de Anuncio -->
+        <div class="top-banner">
+            <div class="scroll-text">
+                <span>Nueva Colección Primavera 2025 "Fish Love"</span>
+            </div>
+        </div>
     <!--Barra de Navegación -->
     <header>
         <nav class="navbar navbar-expand-lg custom-navbar">
@@ -125,19 +132,21 @@
         <section class="galeria-section">
         <div class="galeria-grid">
             <div class="card">
-                <img src="imagenes/collar-turquesa-concha-marina-boho-poopybijoux.webp" alt="Collar boho con cristales turquesa y colgante de concha marina, ideal para looks inspirados en el mar" />
+                <img src="imagenes/collar-turquesa-concha-marina-boho-poopybijoux.webp" class="card-img-top" alt="Collar boho con cristales turquesa y colgante de concha marina, ideal para looks inspirados en el mar" />
                 <h4>Collar Marina</h4>
                 <p>Hecho a mano con cristales y corales</p>
                 <a href="pages/tienda.html" class="ver-mas">Ver más</a>
             </div>
+            
             <div class="card">
-                <img src="imagenes/collar-agata-ambar-boho-poopybijoux.webp" alt="Collar con piedra ágata en tono ámbar, perfecto para looks elegantes y naturales "  />
+                <img src="imagenes/collar-agata-ambar-boho-poopybijoux.webp" class="card-img-top" alt="Collar con piedra ágata en tono ámbar, perfecto para looks elegantes y naturales "  />
                 <h4>Collar Agata</h4>
                 <p>Viví el poder de las piedras naturales</p>
                 <a href="pages/tienda.html" class="ver-mas">Ver más</a>
+            
             </div>
                 <div class="card">
-                <img src="imagenes/collar-cadena-dorada-marino-poopybijoux.webp" alt="Collar con cadena dorada y detalles marinos, perfecto para looks frescos e inspiradores" />
+                <img src="imagenes/collar-cadena-dorada-marino-poopybijoux.webp" class="card-img-top" alt="Collar con cadena dorada y detalles marinos, perfecto para looks frescos e inspiradores" />
                 <h4>Collar Coral Marino</h4>
                 <p>Diseño inspirado en el mar</p>
                 <a href="pages/tienda.html" class="ver-mas">Ver más</a>
@@ -152,19 +161,19 @@
         </p>
         <div class="galeria-grid">
             <div class="card">
-                <img src="imagenes/aros-dorados-perlas-caracoles-boho-poopybijoux.webp" alt="Aros dorados con detalles de perlas y caracoles, perfectos para looks boho"  />
+                <img src="imagenes/aros-dorados-perlas-caracoles-boho-poopybijoux.webp" class="card-img-top" alt="Aros dorados con detalles de perlas y caracoles, perfectos para looks boho"  />
                 <h4>Aros Dorados Boho con Perlas</h4>
                 <p>Perfecto para complementar tus looks</p>
                 <a href="pages/tienda.html" class="ver-mas">Ver más</a>
             </div>
             <div class="card">
-                <img src="imagenes/aros-dorados-coral-boho-poopybijoux.webp" alt="Aros dorados con detalles boho y coral, ideales para outfits juveniles" />
+                <img src="imagenes/aros-dorados-coral-boho-poopybijoux.webp" class="card-img-top" alt="Aros dorados con detalles boho y coral, ideales para outfits juveniles" />
                 <h4>Aros Dorados Boho con Coral</h4>
                 <p>Para looks más frescos y relajados</p>
                 <a href="pages/tienda.html" class="ver-mas">Ver más</a>
             </div>
                 <div class="card">
-                <img src="imagenes/aros-verano-caracol-mar-poopybijoux.webp" alt="Aros inspirados en el verano con detalles de caracol y mar, perfectos para looks playeros" />
+                <img src="imagenes/aros-verano-caracol-mar-poopybijoux.webp" class="card-img-top" alt="Aros inspirados en el verano con detalles de caracol y mar, perfectos para looks playeros" />
                 <h4>Aros Secretos del Mar</h4>
                 <p>Diseño fresco con detalles de caracol y oro</p>
                 <a href="pages/tienda.html" class="ver-mas">Ver más</a>
@@ -173,14 +182,19 @@
         </section>
 
         <!-- WHATSAPP FIJO -->
-        <a href="https://wa.me/5491155024103" class="whatsapp" target-btn="_blank">
-        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/5491155024103" 
+            class="whatsapp-float" 
+            target="_blank" 
+            rel="noopener" 
+            aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
         </a>
+
     </main>
     
     <!-- FOOTER -->
     
-    <footer class="footer">
+    <footer class="footer footer-index">
         <div class="social">
             <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
@@ -190,8 +204,9 @@
         <form class="suscripcion">
             <h4>Recibí las mejores Ofertas!</h4>
             <input type="email" placeholder="Tu email" required>
-            <button type="submit">Suscribirse</button>
+            <button type="submit" class="subscribe-btn">Suscríbete</button>
         </form>
+
         
         <!-- Mensaje legal -->
         <p class="copyright">

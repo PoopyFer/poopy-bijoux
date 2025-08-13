@@ -1,0 +1,54 @@
+// styles/scss/_variables.scss
+
+// ==== Colores base ====
+$color-black: #000;
+$color-primary: #e75cd0; // rosa
+$color-hover: #6c5ce7;   // violeta
+$color-dark: #333333;
+$color-gray: #999999;
+$color-white: #ffffff;
+
+// ==== Colores de marca / acentos ====
+$brand-rose: #e75cd0;        // botón / acento principal (Suscribirse)
+$brand-rose-hover: #6c5ce7;  // hover del botón
+$accent-purple: #6e068e;     // usado en títulos puntuales
+$deep-purple: #44318d;       // secundario (detalles)
+
+// ==== Estilo para links de beneficios ====
+.cta-link {
+    color: $color-primary;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+    color: $color-hover;
+    text-decoration: underline;
+    transform: scale(1.05);
+    }
+}
+
+// Otros
+$bg-light: #f8f8f8;
+$link-hover-light: #f6abab;
+$whatsapp-green: #25d366;
+
+// ==== Tipografías ====
+$font-main: 'Playfair Display', serif;
+$font-ui: 'Helvetica Neue', sans-serif;
+
+// ==== Sombras / utilidades ====
+$card-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+// WhatsApp floating button
+$whatsapp-color: #25d366;
+$whatsapp-size: 60px;
+$whatsapp-icon-size: 1.6rem;
+$whatsapp-bottom: 20px;
+$whatsapp-right: 20px;
+$whatsapp-z: 9999;
+$whatsapp-bounce-duration: 3s; // ciclo completo: una "sacudida" cada 3s
+$whatsapp-bounce-move: 8px;    // cuánto se mueve en el rebote
+$whatsapp-box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+

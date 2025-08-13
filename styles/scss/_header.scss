@@ -1,0 +1,25 @@
+
+@use 'variables' as *;
+
+.custom-navbar {
+    background-color: $color-white;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+.nav-link {
+    padding: 10px;
+    color: $color-dark !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $brand-rose !important;
+    }
+}
+}
+
+.text-lilac {
+    color: $accent-purple;
+}

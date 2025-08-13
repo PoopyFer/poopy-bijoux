@@ -1,0 +1,9 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos temporales de Mac
+.DS_Store
+
+# Ignorar caché y mapas de SASS
+.sass-cache/
+*.map

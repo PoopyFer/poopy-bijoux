@@ -1,0 +1,61 @@
+// styles/scss/_whatsapp.scss
+@use 'variables' as *;
+
+// mixin local (puede ir acá o en _mixins.scss si preferís centralizar)
+@mixin float-action($size, $bg, $shadow) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: $bg;
+    box-shadow: $shadow;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* keyframes: la mayor parte del tiempo está quieto; en ~80% hace un salto rápido */
+@keyframes whatsapp-bounce {
+    0%, 79%, 100% { transform: translateY(0); }
+    80% { transform: translateY(-#{$whatsapp-bounce-move}); }
+    85% { transform: translateY(0); }
+}
+
+/* BOTÓN FLOTANTE */
+.whatsapp-btn {
+    position: fixed;
+    right: $whatsapp-right;
+    bottom: $whatsapp-bottom;
+    z-index: $whatsapp-z;
+
+@include float-action($whatsapp-size, $whatsapp-color, $whatsapp-box-shadow);
+
+    color: #fff;
+    font-size: $whatsapp-icon-size;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: whatsapp-bounce $whatsapp-bounce-duration ease-in-out infinite;
+    animation-fill-mode: both;
+
+  /* pausa la animación y aplica hover visual al pasar el mouse */
+&:hover {
+    animation-play-state: paused;
+    transform: scale(1.12) rotate(8deg);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.24);
+}
+
+i {
+    pointer-events: none; /* que el icono no intercepte el hover del enlace */
+}
+}
+
+/* Ajustes responsive (dispositivo más pequeño) */
+@media (max-width: 768px) {
+.whatsapp-btn {
+    right: calc(#{$whatsapp-right} / 1.2);
+    bottom: calc(#{$whatsapp-bottom} / 1.2);
+    width: calc(#{$whatsapp-size} * 0.85);
+    height: calc(#{$whatsapp-size} * 0.85);
+    font-size: calc(#{$whatsapp-icon-size} * 0.9);
+}
+}
+

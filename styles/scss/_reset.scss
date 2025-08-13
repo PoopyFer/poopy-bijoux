@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+/* Reset / Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-ui;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background: $color-white;
+    color: $color-dark;
+}
+
+.body-wrapper {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.section-title {
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+.separado {
+    margin-top: 60px;
+}
+
+/* Global lists / links */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
