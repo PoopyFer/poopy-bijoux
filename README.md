@@ -24,7 +24,7 @@ Los diseños están inspirados en el mar, la naturaleza y los detalles artesanal
 - Optimización SEO completa (meta tags, Open Graph, alt text, title)
 
 ## 🌐 Enlaces
-- [Ver sitio en vivo](https://PoopyFer.github.io/poopy-bijoux)
+- [Ver sitio en vivo]([)](https://poopy-bijoux.vercel.app/)
 - [Ver proyecto en GitHub](https://github.com/PoopyFer/poopy-bijoux)
 
 ## 📝 Notas del Proyecto
