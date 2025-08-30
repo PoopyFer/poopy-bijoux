@@ -388,3 +388,28 @@ body {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* =========================
+  INDEX - CARDS
+   ========================= */
+.index-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.index-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.index-card img {
+  width: 100%;
+  display: block;
+}
+
+.index-card .card-body {
+  padding: 15px;
+}
